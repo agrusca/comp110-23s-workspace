@@ -2,7 +2,7 @@
 
 __author__ = "730309157"
 
-secret_word: str = ("knoll")
+secret_word: str = ("python")
 original_guess: str = input(f"What is your {len(secret_word)}-letter guess? ")
 current_index: int = 0
 resulting_emoji: str = ("")
