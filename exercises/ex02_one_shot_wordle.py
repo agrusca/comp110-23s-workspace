@@ -25,12 +25,12 @@ if len(original_guess) == len(secret_word):
             # if specific index of guess does NOT match index of secret word
             does_character_exist: bool = False 
             alternate_index: int = 0
-            while does_character_exist == False and alternate_index < len(secret_word):
+            while does_character_exist is False and alternate_index < len(secret_word):
                 if secret_word[alternate_index] == original_guess[current_index]:
                     # if character in secret word at certain index matches any of the characters in guess at different index 
                     does_character_exist = True
                 alternate_index = alternate_index + 1 
-            if does_character_exist == True:
+            if does_character_exist is True:
                 resulting_emoji = resulting_emoji + YELLOW_BOX
             else:
                 resulting_emoji = resulting_emoji + WHITE_BOX
