@@ -1,10 +1,11 @@
-"""EX03 - Wordle"""
+"""EX03 - Wordle."""
 
 __author__ = "730309157"
 
 WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
+
 
 def contains_char(str_input: str, single_character: str) -> bool:
     """Checks whether single_character is found at any index of str_input."""
@@ -19,6 +20,7 @@ def contains_char(str_input: str, single_character: str) -> bool:
         current_idx = current_idx + 1 
     return does_character_exist
 
+
 def emojified(guess: str, secret: str) -> str: 
     """Codifies characters in guess depending on whether they exist in secret."""
     assert len(guess) == len(secret)
@@ -26,9 +28,9 @@ def emojified(guess: str, secret: str) -> str:
     resulting_emoji: str = ""
     while current_idx < len(secret):
         if guess[current_idx] == secret[current_idx]:
-            # if specific index of guess matches specific index of secret word
+            #  if specific index of guess matches specific index of secret word
             resulting_emoji = resulting_emoji + GREEN_BOX
-        else: # if specific index of guess does NOT match index of secret word
+        else: #  if specific index of guess does NOT match index of secret word
             if contains_char(secret, guess[current_idx]) is True:
                 # if any index of guess exists in secret
                 resulting_emoji = resulting_emoji + YELLOW_BOX
@@ -37,6 +39,7 @@ def emojified(guess: str, secret: str) -> str:
         current_idx = current_idx + 1  
     return resulting_emoji
 
+
 def input_guess(expected_length: int) -> str:
     """Prompts user for guess of length expected_length."""
     guess: str = input(f"Enter a {expected_length} character word: ")
@@ -44,6 +47,7 @@ def input_guess(expected_length: int) -> str:
         # while the length of guess is not equal to the expected length 
         guess = input(f"That wasn't {expected_length} chars! Try again: ")
     return guess
+
 
 def main() -> None:
     """The entrypoint of the program and main game loop."""
@@ -64,6 +68,7 @@ def main() -> None:
         if turns == 6 and game_won == False:
             print("X/6 - Sorry, try again tomorrow!")
         turns = turns + 1
+
 
 if __name__ == "__main__":
     main()
