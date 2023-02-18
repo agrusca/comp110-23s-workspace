@@ -35,7 +35,8 @@ def emojified(guess: str, secret: str) -> str:
             if contains_char(secret, guess[current_idx]) is True:
                 # if any index of guess exists in secret
                 resulting_emoji = resulting_emoji + YELLOW_BOX
-            else: #  if any index of guess does not exist in secret
+            else: 
+                #  if any index of guess does not exist in secret
                 resulting_emoji = resulting_emoji + WHITE_BOX
         current_idx = current_idx + 1  
     return resulting_emoji
@@ -66,7 +67,7 @@ def main() -> None:
         if guess == secret:
             game_won = True
             print(f"You won in {turns}/6 turns!")
-        if turns == 6 and game_won == False:
+        if turns == 6 and game_won is False:
             print("X/6 - Sorry, try again tomorrow!")
         turns = turns + 1
 
