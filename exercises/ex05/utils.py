@@ -2,6 +2,7 @@
 
 __author__ = "730309157"
 
+
 def only_evens(int_list: list[int]) -> list[int]:
     """Given an int_list, returns new list contanining only even elements of int_list."""
     even_list: list[int] = list()
@@ -37,5 +38,3 @@ def sub(list_1: list[int], start_index: int, end_index: int) -> list[int]:
     for idx in range(start_index, end_index):
         subset_list.append(list_1[idx])
     return subset_list
-    
-

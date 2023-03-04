@@ -4,6 +4,7 @@ __author__ = "730309157"
 
 from exercises.ex05.utils import only_evens, sub, concat
 
+
 def test_empty() -> None:
     """Tests empty list in only_evens."""
     assert only_evens([]) == []
@@ -47,4 +48,3 @@ def test_index_in_range() -> None:
 def test_large_end_index() -> None:
     """Tests end_index out of range of list in sub."""
     assert sub([1, 2, 3, 4], 1, 6) == [2, 3, 4]
-
