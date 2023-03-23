@@ -19,7 +19,7 @@ len(grocery_list)
 #remove item from a list
 grocery_list.pop(2)
 
-#importing a package
+#importing a module
 from lessons import functions
     #from <package name> import <module name>
 
@@ -33,7 +33,7 @@ functions.randint(1,7)
 
 #having something only run in main function
 if __name__== "__main__":
-    print()
+    main()
 
 #making a local variable global
 lauren: str = "a friend"
@@ -55,9 +55,9 @@ for item in grocery_list:
 #tuple
 coordinate: tuple[float, float, float] = (1.0, 1.0, 1.0)
     #parentheses help python recognize its not a list
-player: tuple[str, float]
-lebron: player = ("James", 6)
-mj: player = ("Jordan", 23)
+Player: tuple[str, int]
+lebron: Player = ("James", 6)
+mj: Player = ("Jordan", 23)
     #store in heap
 
 #range
@@ -87,7 +87,7 @@ ice_cream.pop("chocolate")
 
 #accessing values from dictionary
 print(f"Number of vanilla orders: {ice_cream['vanilla']}")
-    #need single quotes
+    #need single quotes when using f string
 
 #modyfing values from dictionary
 ice_cream["vanilla"] = 9 
