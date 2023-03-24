@@ -1,4 +1,5 @@
 from csv import DictReader
+#helps read csv files and convert them into dictionaries
 
 def read_csv_rows(filename: str) -> list[dict[str, str]]: 
     """Read csv file and return as a list of dicts with header keys."""
@@ -7,7 +8,7 @@ def read_csv_rows(filename: str) -> list[dict[str, str]]:
     csv_reader = DictReader(file_handle)
     for row in csv_reader:
         result.append(row)
-    file_handle.close
+    file_handle.close()
     return result
 
 def column_vals(table: list[dict[str,str]], header: str) -> list[str]:
