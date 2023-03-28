@@ -10,7 +10,7 @@ def invert(my_dict: dict[str, str]) -> dict[str, str]:
     for key in my_dict:
         value_list.append(my_dict[key])
     for index in range(0, len(value_list)):
-        for tracker_index in range(index+1, len(value_list)):
+        for tracker_index in range(index + 1, len(value_list)):
             if value_list[index] == value_list[tracker_index]:
                 raise KeyError("Inverting this dictionary would create duplicate keys.")
     for key in my_dict:

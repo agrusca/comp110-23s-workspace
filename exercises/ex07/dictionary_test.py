@@ -48,5 +48,3 @@ def test_unique_list() -> None:
 def test_redundant_list() -> None: 
     """Tests input list with redundant values."""
     assert count(["apple", "apple", "banana", "banana"]) == {"apple": 2, "banana": 2}
-
-
